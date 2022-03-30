@@ -1,5 +1,6 @@
 import { useState } from "react";
 import * as S from "./styled";
+import SubmitButton from "../SubmitButton";
 
 const Box = () => {
   const [selected, setSelected] = useState();
@@ -48,7 +49,9 @@ const Box = () => {
         </button>
       </S.WrapperItems>
       <S.WrapperItems>
-        <button>Submit!</button>
+        <SubmitButton whatIsSelected={selected}>
+          Submit!
+        </SubmitButton>
       </S.WrapperItems>
     </S.Wrapper>
   );

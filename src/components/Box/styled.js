@@ -5,6 +5,7 @@ export const WrapperItems = styled.div`
   justify-content: center;
   width: 300px;
   text-align: justify;  
+  
 
   button{
     margin: 10px;
@@ -21,6 +22,7 @@ export const Wrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   padding: 20px; 
+  background-color: darkgray;  
 
   border: 3px solid;
   border-radius: 5%;

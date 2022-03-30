@@ -1,8 +1,15 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
+import React from "react";
+import ReactDOM from "react-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import App from "./App";
+import SubmitScreen from "./components/SubmitScreen";
 
 ReactDOM.render(
-  <App />,
-  document.getElementById('root')
+  <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<App />}></Route>
+      <Route path="/submit" element={<SubmitScreen />}/>
+    </Routes>
+  </BrowserRouter>,
+  document.getElementById("root")
 );
