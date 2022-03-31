@@ -1,15 +1,21 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import * as S from "./styled";
+
+export let numberSelected = 0;
 
 const SubmitButton = (props) => {
-  const Aha = (selected) => {
-    console.log(selected);
+  const showSelected = (whatIsSelected) => {
+    numberSelected = whatIsSelected;
   };
 
   return (
-    <button onClick={() => Aha(props.whatIsSelected)}>
-      <Link to="/submit">Submit</Link>
-    </button>
+    <Link to="/submit">
+      <S.Button onClick={() => showSelected(props.whatIsSelected)}>
+        {" "}
+        Submit{" "}
+      </S.Button>
+    </Link>
   );
 };
 
